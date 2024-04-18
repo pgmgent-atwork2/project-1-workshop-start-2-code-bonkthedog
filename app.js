@@ -1,2 +1,10 @@
-import { dogImages } from "./assets/data";
+let imageIndex = 0;
 
+document.getElementById("toggleImages").addEventListener("click", function() {
+    const images = document.querySelectorAll(".imgHide");
+    if (imageIndex < images.length) {
+        images[imageIndex].classList.remove("dog[imgageIndex]");
+        images[imageIndex].classList.add("imgShow");
+        imageIndex++;
+    }
+});
