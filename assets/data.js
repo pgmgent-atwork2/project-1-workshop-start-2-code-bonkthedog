@@ -1,4 +1,5 @@
-const dogImages = [
+export const dogImages = [
+    "img/bonk.gif",
     "img/daggoe-cry.jpg",
     "img/daggoe-gamer.jpg",
     "img/daggoe-mac.jpg",
@@ -7,4 +8,5 @@ const dogImages = [
     "img/daggoe-strong.jpg",
     "img/daggoe.jpg",
 ]
+
 

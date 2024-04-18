@@ -2,8 +2,12 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
+}
+.container-window{
+    width: 50rem;
+    height: 50rem;
+}
 section p {
     justify-content: center;
     display: flex;
@@ -11,19 +15,19 @@ section p {
 .leftBox{
     background-color: green;
     width: 33.33%;
-    height: 100vh;
+    height: 100%;
 }
 
 .rightBox{
     background-color: red;
     width: 33.33%;
-    height: 100vh;
+    height: 100%;
 }
 
 .middleBox{
     background-color: blue;
     width: 33.33%;
-    height: 100vh;
+    height: 100%;
 }   
 
 /*Grid*/
@@ -48,3 +52,13 @@ section p {
     .div7 { grid-area: 3 / 1 / 4 / 2; }
     .div8 { grid-area: 3 / 2 / 4 / 3; }
     .div9 { grid-area: 3 / 3 / 4 / 4; }
+
+    .div1, .div4, .div7 {
+        transform: scaleX(-1);
+    }
+    .div8 {
+        transform: rotate(90deg);
+    }
+    .div2{
+        transform: rotate(-90deg);
+    }
