@@ -1,4 +1,5 @@
 let imageIndex = 0;
+let counterValue = 0;
 
 document.getElementById("toggleImages").addEventListener("click", function() {
     const images = document.querySelectorAll(".imgHide");
@@ -11,3 +12,8 @@ document.getElementById("toggleImages").addEventListener("click", function() {
         document.getElementById("toggleImages").textContent = "Max reached";
     }
 });
+
+setInterval(function() {
+    counterValue += imageIndex;
+    document.querySelector(".clickCounter").textContent = counterValue;
+}, 1000);
