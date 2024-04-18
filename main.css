@@ -45,20 +45,13 @@ section p {
     
     .side-dog-right {
         transform: scaleX(-1);
-        width:200px;
-        height:200px;
     }
     .side-dog-up {
         transform: rotate(90deg);
-        width:200px;
-        height:200px;
     }
     .side-dog-down {
         transform: rotate(-90deg);
-        width:200px;
-        height:200px;
     }
-    
     .imgHide{
         display: none;
     }
