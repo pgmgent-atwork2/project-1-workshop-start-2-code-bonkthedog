@@ -41,6 +41,8 @@ section p {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    position: relative;
+    height: 300px;
     }
     
     .side-dog-right {
@@ -57,4 +59,12 @@ section p {
     }
     .imgShow{
         display: block;
+    }
+
+    .main-dog{
+        position: absolute;
+        width:100px;
+        height: 100px;
+        top: 5rem;
+        left: 5rem;
     }
