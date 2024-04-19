@@ -13,7 +13,12 @@ document.getElementById("toggleImages").addEventListener("click", function() {
     }
 });
 
+document.querySelector(".main-dog img").addEventListener("click", function() {
+    counterValue++;
+    document.querySelector(".clickCounter").textContent = counterValue;
+});
+
 setInterval(function() {
-    counterValue += imageIndex;
+    counterValue += imageIndex ;
     document.querySelector(".clickCounter").textContent = counterValue;
 }, 1000);
