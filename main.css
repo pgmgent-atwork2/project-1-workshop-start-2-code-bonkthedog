@@ -1,3 +1,7 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );   
 }
@@ -99,13 +103,13 @@ section p {
     }
     
     .side-dog-right {
-        transform: scaleX(-1);
+        transform: scaleX(1);
     }
     .side-dog-up {
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
     }
     .side-dog-down {
-        transform: rotate(-90deg);
+        transform: rotate(90deg);
     }
     .imgHide {
         display: none;
