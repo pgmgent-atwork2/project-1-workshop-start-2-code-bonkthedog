@@ -33,7 +33,6 @@ section p {
 /*Middle Box*/
 
 .middleBox{
-    /* background-color: blue; */
     width: 33.33%;
     height: 40rem;
     border: 2px solid black;
@@ -42,7 +41,6 @@ section p {
 /*Right box*/
 
 .rightBox{
-    /* background-color: red; */
     width: 33.33%;
     height: 40rem;
     display: flex;
