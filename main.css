@@ -2,34 +2,32 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%
 
 }
-.container-window{
-    width: 50rem;
-    height: 50rem;
-    background-color:aquamarine;
-}
+
 section p {
     justify-content: center;
     display: flex;
 }
+
 .leftBox{
     position: relative;
     background-color: green;
     width: 33.33%;
-    height: 100%;
+    height: 40rem;
 }
 
 .rightBox{
     background-color: red;
     width: 33.33%;
-    height: 100%;
+    height: 40rem;
 }
 
 .middleBox{
     background-color: blue;
     width: 33.33%;
-    height: 100%;
+    height: 40rem;
 }   
 
 
@@ -131,6 +129,11 @@ section p {
 
 /*Rows*/
 
-.row-1 {
+.row {
     display:flex;
+}
+
+.row img {
+    height: 100px;
+    width: 100px;
 }
