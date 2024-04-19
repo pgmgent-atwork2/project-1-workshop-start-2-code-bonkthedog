@@ -1,6 +1,7 @@
 let imageIndex = 0;
 let counterValue = 200;
 
+
 window.onload = function() {
     const rows = ['row1', 'row2', 'row3', 'row4', 'row5', 'row6'];
     rows.forEach((row, index) => {
@@ -10,7 +11,6 @@ window.onload = function() {
         });
     });
 };
-
 
 document.querySelector(".main-dog img").addEventListener("click", function() {
     counterValue++;
@@ -22,36 +22,11 @@ setInterval(function() {
     document.querySelector(".clickCounter").textContent = counterValue;
 }, 1000);
 
-function addEventListenerToButton2(buttonId, requiredCredits, rowClass) {
-    document.getElementById(buttonId).addEventListener("click", function() {
-        if (counterValue >= requiredCredits) {
-            const images = document.querySelectorAll(rowClass);
-            const shownImages = document.querySelectorAll(rowClass + '.imgShow');
-            if (shownImages.length < images.length) {
-                if (imageIndex < images.length) {
-                    images[imageIndex].classList.remove("imgHide");
-                    images[imageIndex].classList.add("imgShow");
-                    imageIndex++;
-                }
-                else {
-                    document.getElementById(buttonId).textContent = "Max reached";
-                }
-                counterValue -= requiredCredits;
-                document.querySelector(".clickCounter").textContent = counterValue;
-            } else {
-                alert("Max images per row reached");
-            }
-        } else {
-            alert("You don't have enough points");
-        }
-    });
-}
 function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
         if (counterValue >= requiredCredits) {
             const images = document.querySelectorAll(`.leftBox ${imgClass}`);
             const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
-            console.log("dit is eerst" , hiddenImages);
             if (hiddenImages.length > 0) {
                 console.log();
                 hiddenImages[0].classList.remove("imgHide");
@@ -63,15 +38,30 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
     });
 }
 
+function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
+    document.getElementById(buttonId).addEventListener("click", function() {
+            const images = document.querySelectorAll(`.middleBox ${imgClass}`);
+            const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
+            console.log(hiddenImages);
+            if (hiddenImages.length > 0) {
+                hiddenImages[0].classList.remove("imgHide");
+                hiddenImages[0].classList.add("imgShow");
+                imageIndex++;
+                counterValue -= requiredCredits; // subtract requiredCredits from counterValue
+            }
+        
+    });
+}
 
+const buttonIndex = 0;
 
 addEventListenerToButton("dogBat", 25, ".imgHide");
-addEventListenerToButton2("middleRowButton1", 30, ".row1");
-addEventListenerToButton2("middleRowButton2", 40, ".row2");
-addEventListenerToButton2("middleRowButton3", 50, ".row3");
-addEventListenerToButton2("middleRowButton4", 60, ".row4");
-addEventListenerToButton2("middleRowButton5", 70, ".row5");
-addEventListenerToButton2("middleRowButton6", 80, ".row6");
+addEventListenerToButton2("middleRowButton1", 30, ".row1-dog1");
+addEventListenerToButton2("middleRowButton2", 40, ".row2-dog1");
+addEventListenerToButton2("middleRowButton3", 50, ".row3-dog1");
+addEventListenerToButton2("middleRowButton4", 60, ".row4-dog1");
+addEventListenerToButton2("middleRowButton5", 70, ".row5-dog1");
+addEventListenerToButton2("middleRowButton6", 80, ".row6-dog1");
 
 
 
