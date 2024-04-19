@@ -1,3 +1,6 @@
+body {
+    background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );   
+}
 section {
     display: flex;
     justify-content: space-between;
@@ -16,24 +19,33 @@ section p {
 .container {
     align-items: center;
 }
-.leftBox{
-    position: relative;
-    background-color: green;
+
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Middle Box*/
+
+.middleBox{
+    /* background-color: blue; */
     width: 33.33%;
     height: 40rem;
-    align-items: center;
+    border: 2px solid black;
 }
 
 /*Right box*/
 
 .rightBox{
-    background-color: red;
+    /* background-color: red; */
     width: 33.33%;
     height: 40rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
+    border: 2px solid black;
 }
 
 .rightBox button {
@@ -72,12 +84,6 @@ section p {
 .rightBox button:hover:after {
     transform: scale(4);
 }
-
-.middleBox{
-    background-color: blue;
-    width: 33.33%;
-    height: 40rem;
-}   
 
 
 /*Grid*/
@@ -175,6 +181,7 @@ section p {
         top: 12.4rem;
         left: 11rem;
     }
+    
 
 /*Rows*/
 
@@ -186,3 +193,4 @@ section p {
     height: 100px;
     width: 100px;
 }
+
