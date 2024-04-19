@@ -45,9 +45,20 @@ function addEventListenerToButton(buttonId, requiredCredits, rowClass) {
         }
     });
 }
+function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
+    document.getElementById(buttonId).addEventListener("click", function() {
+        if (counterValue >= requiredCredits) {
+            const images = document.querySelectorAll(`.leftBox ${imgClass}`);
+            const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
+            if (hiddenImages.length > 0) {
+                hiddenImages[0].classList.remove("imgHide");
+                hiddenImages[0].classList.add("imgShow");
+                imageIndex++;
+            }
+        }
+    });
+}
 
-
-addEventListenerToButton("dogBat", 25, ".imgHide");
 addEventListenerToButton("dogBat", 25, ".imgHide");
 addEventListenerToButton("middleRowButton1", 30, ".row1");
 addEventListenerToButton("middleRowButton2", 40, ".row2");
