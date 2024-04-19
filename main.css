@@ -54,17 +54,77 @@ section p {
     .side-dog-down {
         transform: rotate(-90deg);
     }
-    .imgHide{
+    .imgHide {
         display: none;
     }
-    .imgShow{
+    .imgShow {
         display: block;
     }
 
-    .main-dog{
+    .main-dog {
         position: absolute;
         width:100px;
         height: 100px;
-        top: 5rem;
-        left: 5rem;
+        top: 100px;
+        left: 5.5rem;
+    }
+
+    /*Dogs*/
+
+    .dog1 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+    }
+
+    .dog2 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        left: 5.5rem;
+    }
+
+    .dog3 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        left: 11rem;
+    }
+
+    .dog4 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        top: 100px;
+    }
+
+    .dog5 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        top: 100px;
+        left: 11rem;
+    }
+
+    .dog6 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        top: 12.4rem;
+    }
+
+    .dog7 {
+        position: absolute;
+        width:100px;
+        height: 100px;
+        top: 12.4rem;
+        left: 5.5rem;
+    }
+
+    .dog8 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 12.4rem;
+        left: 11rem;
     }
