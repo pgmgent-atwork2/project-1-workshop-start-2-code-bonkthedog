@@ -40,20 +40,24 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
 
 function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
-            const images = document.querySelectorAll(`.middleBox ${imgClass}`);
-            const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
-            console.log(hiddenImages);
+        console.log("button clicked", buttonId);
+        const images = document.querySelectorAll(`.middleBox ${imgClass}`);
+        const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
+        
+        console.log(hiddenImages);
+
             if (hiddenImages.length > 0) {
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
                 counterValue -= requiredCredits; // subtract requiredCredits from counterValue
             }
-        
     });
 }
 
-const buttonIndex = 0;
+
+
+
 
 
 addEventListenerToButton("dogBat", 25, ".imgHide");
@@ -62,7 +66,7 @@ addEventListenerToButton2("middleRowButton2", 40, ".row2-dog1");
 addEventListenerToButton2("middleRowButton3", 50, ".row3-dog1");
 addEventListenerToButton2("middleRowButton4", 60, ".row4-dog1");
 addEventListenerToButton2("middleRowButton5", 70, ".row5-dog1");
-addEventListenerToButton2("middleRowButton6", 80, ".row6-dog1");
+ddEventListenerToButton2("middleRowButton6", 80, ".row6-dog1");
 
 
 
