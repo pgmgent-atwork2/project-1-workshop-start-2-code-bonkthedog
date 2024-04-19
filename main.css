@@ -11,19 +11,29 @@ section p {
     display: flex;
 }
 
+/*Left box*/
+
+.container {
+    align-items: center;
+}
 .leftBox{
     position: relative;
     background-color: green;
     width: 33.33%;
     height: 40rem;
+    align-items: center;
 }
 
-/*RIght bpx*/
+/*Right box*/
 
 .rightBox{
     background-color: red;
     width: 33.33%;
     height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .rightBox button {
@@ -39,6 +49,8 @@ section p {
     position: relative;
     overflow: hidden;
     font-weight: bold;
+    margin-bottom: 1rem;
+    flex-basis: calc(50% - 0.5rem);
 }
 
 .rightBox button:after {
@@ -166,11 +178,11 @@ section p {
 
 /*Rows*/
 
-.row {
+.row1 {
     display:flex;
 }
 
-.row img {
+.row1-dog1 img {
     height: 100px;
     width: 100px;
 }
