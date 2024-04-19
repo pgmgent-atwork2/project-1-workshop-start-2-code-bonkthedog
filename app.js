@@ -54,10 +54,12 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
+                counterValue -= requiredCredits; // subtract requiredCredits from counterValue
             }
         }
     });
 }
+
 
 addEventListenerToButton("dogBat", 25, ".imgHide");
 addEventListenerToButton("middleRowButton1", 30, ".row1");
