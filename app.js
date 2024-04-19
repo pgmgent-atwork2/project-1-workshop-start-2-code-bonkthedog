@@ -1,5 +1,5 @@
 let imageIndex = 0;
-let counterValue = 0;
+let counterValue = 200;
 
 window.onload = function() {
     const rows = ['row1', 'row2', 'row3', 'row4', 'row5', 'row6'];
@@ -11,6 +11,7 @@ window.onload = function() {
     });
 };
 
+
 document.querySelector(".main-dog img").addEventListener("click", function() {
     counterValue++;
     document.querySelector(".clickCounter").textContent = counterValue;
@@ -21,7 +22,7 @@ setInterval(function() {
     document.querySelector(".clickCounter").textContent = counterValue;
 }, 1000);
 
-function addEventListenerToButton(buttonId, requiredCredits, rowClass) {
+function addEventListenerToButton2(buttonId, requiredCredits, rowClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
         if (counterValue >= requiredCredits) {
             const images = document.querySelectorAll(rowClass);
@@ -50,7 +51,9 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
         if (counterValue >= requiredCredits) {
             const images = document.querySelectorAll(`.leftBox ${imgClass}`);
             const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
+            console.log("dit is eerst" , hiddenImages);
             if (hiddenImages.length > 0) {
+                console.log();
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
@@ -61,13 +64,14 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
 }
 
 
+
 addEventListenerToButton("dogBat", 25, ".imgHide");
-addEventListenerToButton("middleRowButton1", 30, ".row1");
-addEventListenerToButton("middleRowButton2", 40, ".row2");
-addEventListenerToButton("middleRowButton3", 50, ".row3");
-addEventListenerToButton("middleRowButton4", 60, ".row4");
-addEventListenerToButton("middleRowButton5", 70, ".row5");
-addEventListenerToButton("middleRowButton6", 80, ".row6");
+addEventListenerToButton2("middleRowButton1", 30, ".row1");
+addEventListenerToButton2("middleRowButton2", 40, ".row2");
+addEventListenerToButton2("middleRowButton3", 50, ".row3");
+addEventListenerToButton2("middleRowButton4", 60, ".row4");
+addEventListenerToButton2("middleRowButton5", 70, ".row5");
+addEventListenerToButton2("middleRowButton6", 80, ".row6");
 
 
 
