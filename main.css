@@ -178,11 +178,11 @@ section p {
 
 /*Rows*/
 
-.row1 {
+.row1, .row2, .row3, .row4, .row5, .row6 {
     display:flex;
 }
 
-.row1-dog1 img {
+.row1, .row2, .row3, .row4, .row5, .row6 img {
     height: 100px;
     width: 100px;
 }
