@@ -2,7 +2,7 @@ let imageIndex = 0;
 let counterValue = 0;
 
 document.getElementById("dogBat").addEventListener("click", function() {
-    if (counterValue >= 50) {
+    if (counterValue >= 25) {
         const images = document.querySelectorAll(".imgHide");
         if (imageIndex < images.length) {
             images[imageIndex].classList.remove("dog[imageIndex]");
@@ -12,7 +12,7 @@ document.getElementById("dogBat").addEventListener("click", function() {
         else {
             document.getElementById("dogBat").textContent = "Max reached";
         }
-        counterValue -= 50;
+        counterValue -= 25;
         document.querySelector(".clickCounter").textContent = counterValue;
     } else {
         alert("You don't have enough points");
