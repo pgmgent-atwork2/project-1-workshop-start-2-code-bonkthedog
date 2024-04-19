@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions for BonkTheDog Project</title>
+</head>
+<body>
+    <h1>Instructions for BonkTheDog Project</h1>
+    
+    <h2>Step 1: Set up the HTML structure</h2>
+    <ul>
+        <li>Create a new HTML document.</li>
+        <li>Define the document type (<code>&lt;!DOCTYPE html&gt;</code>).</li>
+        <li>Open the <code>&lt;html&gt;</code> tag and set the language attribute to "en".</li>
+        <li>Inside the <code>&lt;html&gt;</code> tag, open the <code>&lt;head&gt;</code> section.</li>
+        <li>Add meta tags for character set and viewport settings.</li>
+        <li>Link two external CSS files: "main.css" and "reset.css".</li>
+        <li>Set the title of the document to "BonkTheDog".</li>
+    </ul>
+
+    <h2>Step 2: Create the main container structure</h2>
+    <ul>
+        <li>Open the <code>&lt;body&gt;</code> tag.</li>
+        <li>Create a <code>&lt;div&gt;</code> element with a class of "container-window".</li>
+        <li>Inside the "container-window" div, create a <code>&lt;section&gt;</code> element with a class of "container".</li>
+        <li>Inside the "container" section, create three main divisions: "leftBox", "middleBox", and "rightBox".</li>
+    </ul>
+
+    <h2>Step 3: Populate the leftBox</h2>
+<ul>
+    <li>Inside the "leftBox", create an <code>&lt;h1&gt;</code> element with a class of "clickCounter" and an empty <code>&lt;p&gt;</code> tag.</li>
+    <li>Create a <code>&lt;div&gt;</code> with a class of "parent" for grid layout.</li>
+    <li>Inside the "parent" div, create eight <code>&lt;div&gt;</code> elements with classes "side-dog", "side-dog-right", "side-dog-down", or "side-dog-up", each containing an <code>&lt;img&gt;</code> tag with the source pointing to "/assets/img/bonk.gif".</li>
+    <li>Add a <code>&lt;div&gt;</code> with a class of "main-dog" containing an <code>&lt;img&gt;</code> tag with the source pointing to "/assets/img/daggoe-mlg.jpg".</li>
+</ul>
+
+<h2>Step 4: Populate the middleBox</h2>
+<ul>
+    <li>Inside the "middleBox", add a <code>&lt;p&gt;</code> tag with the text "2".</li>
+    <li>Create a <code>&lt;div&gt;</code> with a class of "row-1".</li>
+    <li>Inside "row-1", add three <code>&lt;img&gt;</code> tags with the source pointing to "/assets/img/daggoe-cry.jpg" and alternate text "dog".</li>
+</ul>
+
+<h2>Step 5: Populate the rightBox</h2>
+<ul>
+    <li>Inside the "rightBox", create four <code>&lt;button&gt;</code> elements with IDs "dogBat", "middleRowButton1", "middleRowButton2", and "middleRowButton3", each labeled "Slappy dog 20 Credits".</li>
+</ul>
+
+<h2>Step 6: Add JavaScript functionality</h2>
+<ul>
+    <li>Link an external JavaScript file "app.js" just before the closing <code>&lt;/body&gt;</code> tag.</li>
+    <li>Implement JavaScript logic to handle button clicks and counter updates.</li>
+    <li>Add an event listener to the "dogBat" button to handle clicks.</li>
+    <li>Implement logic to check if enough credits are available and display appropriate messages.</li>
+    <li>Implement event listeners for clicking on the main dog image to increase the counter.</li>
+    <li>Use <code>setInterval</code> to update the counter value periodically.</li>
+</ul>
+
+<h2>Step 7: Style the layout using CSS</h2>
+<ul>
+    <li>Define styles for the main sections ("<code>section</code>"), ensuring they are displayed as a flex container with appropriate spacing and alignment.</li>
+    <li>Style the container window with a fixed width and height, and a background color.</li>
+    <li>Define styles for the left, middle, and right boxes with specific widths, heights, and background colors.</li>
+    <li>Implement CSS grid layout for the "parent" container with three rows and three columns.</li>
+    <li>Define styles for hiding and showing images using the "imgHide" and "imgShow" classes.</li>
+    <li>Style individual dog images and rows as needed.</li>
+</ul>
+
+    <h2>Step 8: Add specific styles for dog positions and rows</h2>
+    <ul>
+        <li>Define specific styles for each dog position (dog1 to dog8) to position them within the grid.</li>
+        <li>Define styles for the row-1 element to ensure proper display of images within the row.</li>
+    </ul>
+
+    <p>Once these steps are followed, your HTML document will be structured, styled, and functional according to the provided code.</p>
+</body>
+</html>
