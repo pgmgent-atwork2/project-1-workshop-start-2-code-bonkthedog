@@ -55,6 +55,7 @@ function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
 
 const buttonIndex = 0;
 
+
 addEventListenerToButton("dogBat", 25, ".imgHide");
 addEventListenerToButton2("middleRowButton1", 30, ".row1-dog1");
 addEventListenerToButton2("middleRowButton2", 40, ".row2-dog1");
