@@ -35,7 +35,7 @@ section p {
 /*Middle Box*/
 
 .middleBox{
-    width: 33.33%;
+    max-width: 10rem;
     height: 40rem;
     margin-top:1rem;
 }
@@ -197,4 +197,3 @@ section p {
     height: 100px;
     width: 100px;
 }
-
