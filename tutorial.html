@@ -3,76 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
     <title>Instructions for BonkTheDog Project</title>
 </head>
 <body>
-    <h1>Instructions for BonkTheDog Project</h1>
+    <h1>Learn how to setup your own interactive game!</h1>
+
+    <h2>We will use 3 languages to create this project:</h2>
+    <ul>
+        <li>HTML for structure</li>
+        <li>CSS for styling</li>
+        <li>JavaScript for functionality</li>
+    </ul>
     
-    <h2>Step 1: Set up the HTML structure</h2>
-    <ul>
-        <li>Create a new HTML document.</li>
-        <li>Define the document type (<code>&lt;!DOCTYPE html&gt;</code>).</li>
-        <li>Open the <code>&lt;html&gt;</code> tag and set the language attribute to "en".</li>
-        <li>Inside the <code>&lt;html&gt;</code> tag, open the <code>&lt;head&gt;</code> section.</li>
-        <li>Add meta tags for character set and viewport settings.</li>
-        <li>Link two external CSS files: "main.css" and "reset.css".</li>
-        <li>Set the title of the document to "BonkTheDog".</li>
-    </ul>
-
-    <h2>Step 2: Create the main container structure</h2>
-    <ul>
-        <li>Open the <code>&lt;body&gt;</code> tag.</li>
-        <li>Create a <code>&lt;div&gt;</code> element with a class of "container-window".</li>
-        <li>Inside the "container-window" div, create a <code>&lt;section&gt;</code> element with a class of "container".</li>
-        <li>Inside the "container" section, create three main divisions: "leftBox", "middleBox", and "rightBox".</li>
-    </ul>
-
-    <h2>Step 3: Populate the leftBox</h2>
-<ul>
-    <li>Inside the "leftBox", create an <code>&lt;h1&gt;</code> element with a class of "clickCounter" and an empty <code>&lt;p&gt;</code> tag.</li>
-    <li>Create a <code>&lt;div&gt;</code> with a class of "parent" for grid layout.</li>
-    <li>Inside the "parent" div, create eight <code>&lt;div&gt;</code> elements with classes "side-dog", "side-dog-right", "side-dog-down", or "side-dog-up", each containing an <code>&lt;img&gt;</code> tag with the source pointing to "/assets/img/bonk.gif".</li>
-    <li>Add a <code>&lt;div&gt;</code> with a class of "main-dog" containing an <code>&lt;img&gt;</code> tag with the source pointing to "/assets/img/daggoe-mlg.jpg".</li>
-</ul>
-
-<h2>Step 4: Populate the middleBox</h2>
-<ul>
-    <li>Inside the "middleBox", add a <code>&lt;p&gt;</code> tag with the text "2".</li>
-    <li>Create a <code>&lt;div&gt;</code> with a class of "row-1".</li>
-    <li>Inside "row-1", add three <code>&lt;img&gt;</code> tags with the source pointing to "/assets/img/daggoe-cry.jpg" and alternate text "dog".</li>
-</ul>
-
-<h2>Step 5: Populate the rightBox</h2>
-<ul>
-    <li>Inside the "rightBox", create four <code>&lt;button&gt;</code> elements with IDs "dogBat", "middleRowButton1", "middleRowButton2", and "middleRowButton3", each labeled "Slappy dog 20 Credits".</li>
-</ul>
-
-<h2>Step 6: Add JavaScript functionality</h2>
-<ul>
-    <li>Link an external JavaScript file "app.js" just before the closing <code>&lt;/body&gt;</code> tag.</li>
-    <li>Implement JavaScript logic to handle button clicks and counter updates.</li>
-    <li>Add an event listener to the "dogBat" button to handle clicks.</li>
-    <li>Implement logic to check if enough credits are available and display appropriate messages.</li>
-    <li>Implement event listeners for clicking on the main dog image to increase the counter.</li>
-    <li>Use <code>setInterval</code> to update the counter value periodically.</li>
-</ul>
-
-<h2>Step 7: Style the layout using CSS</h2>
-<ul>
-    <li>Define styles for the main sections ("<code>section</code>"), ensuring they are displayed as a flex container with appropriate spacing and alignment.</li>
-    <li>Style the container window with a fixed width and height, and a background color.</li>
-    <li>Define styles for the left, middle, and right boxes with specific widths, heights, and background colors.</li>
-    <li>Implement CSS grid layout for the "parent" container with three rows and three columns.</li>
-    <li>Define styles for hiding and showing images using the "imgHide" and "imgShow" classes.</li>
-    <li>Style individual dog images and rows as needed.</li>
-</ul>
-
-    <h2>Step 8: Add specific styles for dog positions and rows</h2>
-    <ul>
-        <li>Define specific styles for each dog position (dog1 to dog8) to position them within the grid.</li>
-        <li>Define styles for the row-1 element to ensure proper display of images within the row.</li>
-    </ul>
-
-    <p>Once these steps are followed, your HTML document will be structured, styled, and functional according to the provided code.</p>
+    <h2>Step 1: Set up the MAPS and DOCUMENTS</h2>
+    <p>For editing the project you will need to install the following link <a href="https://code.visualstudio.com/">Visual studio code</a>.</p>
+    <img class="tutorial-image"src="./assets/img/visual-studio.png">
+    <h2>Step 1.1: Create a new project folder (you can choose where you create it!)</h2>
+    <p>Open this folder in Visual Studio Code</p>
+    <h2>Step 1.2: Create the same folder strucutre as shown below:</h2>
+    <img class="tutorial-image"src="./assets/img/folder-structure.png">
+    <h2>Step 1.3: Install following extension</h2>
+    <img class="tutorial-image"src="./assets/img/live-server.png">
+    <p>After installing the extension, you can open the project folder in Visual Studio Code and right click on the index.html file and select <strong>"Open with Live Server".</strong></p>
+    <h2>Step 2: Time to code!</h2>
+    <p>When you opened the file in Live Server, you will see a blank page. Now you can start coding!</p>
+    <h2>Step 2.1: Copy the HTML structure shown below and paste it in your <strong>Index.html</strong> file</h2>
+    <textarea>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html lang="en"&gt;<br>
+        &lt;head&gt;<br>
+            &lt;meta charset="UTF-8"&gt;<br>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+            &lt;link rel="stylesheet" href="/main.css"&gt;<br>
+            &lt;title&gt;BonkTheDog&lt;/title&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+            &lt;h1&gt;Bonk The Dog&lt;/h1&gt;<br>
+            &lt;div id="game"&gt;<br>
+                &lt;div id="dog"&gt;&lt;/div&gt;<br>
+                &lt;div id="score"&gt;Score: 0&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;script src="/main.js"&gt;&lt;/script&gt;<br>
+        &lt;/body&gt;<br>
+        &lt;/html&gt;<br>
+    </textarea>
+    <h2>Step 2.2: Copy the CSS structure shown below and paste it in your <strong>Main.css</strong> file</h2>
+    <textarea>
+        body {<br>
+            font-family: Arial, sans-serif;<br>
+            margin: 0;<br>
+            padding: 0;<br>
+            display: flex;<br>
+            justify-content: center;<br>
+            align-items: center;<br>
+            height: 100vh;<br>
+            background-color: #f0f0f0;<br>
+        }<br>
+        #game {<br>
+            width: 400px;<br>
+            height: 400px;<br>
+            border: 1px solid black;<br>
+            position: relative;<br>
+        }<br>
+        #dog {<br>
+            width: 50px;<br>
+            height: 50px;<br>
+            background-color: brown;<br>
+            position: absolute;<br>
+            top: 50%;<br>
+            left: 50%;<br>
+            transform: translate(-50%, -50%);<br>
+        }<br>
+        #score {<br>
+            position: absolute;<br>
+            top: 0;<br>
+            right: 0;<br>
+            padding: 10px;<br>
+            background-color: black;<br>
+            color: white;<br>
+        }<br>
 </body>
 </html>

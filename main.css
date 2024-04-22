@@ -197,3 +197,10 @@ section p {
     height: 100px;
     width: 100px;
 }
+
+/*Tutorial*/
+
+.tutorial-image {
+    width: 50rem;
+    height: auto;
+}
