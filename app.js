@@ -28,11 +28,10 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
             const images = document.querySelectorAll(`.leftBox ${imgClass}`);
             const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
             if (hiddenImages.length > 0) {
-                console.log();
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
-                counterValue -= requiredCredits; // subtract requiredCredits from counterValue
+                counterValue = Math.max(0, counterValue - requiredCredits); // subtract requiredCredits from counterValue, but not less than 0
             }
         }
     });
@@ -40,16 +39,16 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
 
 function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
-        console.log("button clicked", buttonId);
-        const images = document.querySelectorAll(`.middleBox ${imgClass}`);
-        const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
-        console.log(hiddenImages);
+        if (counterValue >= requiredCredits) {
+            const images = document.querySelectorAll(`.middleBox ${imgClass}`);
+            const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
             if (hiddenImages.length > 0) {
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
-                counterValue -= requiredCredits; 
+                counterValue = Math.max(0, counterValue - requiredCredits); // subtract requiredCredits from counterValue, but not less than 0
             }
+        }
     });
 }
 
