@@ -212,4 +212,31 @@ pre {
     unicode-bidi: isolate;
     white-space: pre;
     margin: 1em 0px;
+    border: 1px black solid ;
+    background-color: gray;
+    width: max-content;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         22
 }
