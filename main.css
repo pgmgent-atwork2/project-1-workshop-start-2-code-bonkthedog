@@ -3,14 +3,14 @@
 }
 
 body {
-    background-image: radial-gradient( circle 897px at 9% 80.3%,  rgba(55,60,245,1) 0%, rgba(234,161,15,0.90) 100.2% );   
+    background-image: radial-gradient(circle 897px at 9% 80.3%, rgba(55, 60, 245, 1) 0%, rgba(234, 161, 15, 0.90) 100.2%);
 }
+
 section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%
-
+    height: 100%;
 }
 
 section p {
@@ -18,8 +18,7 @@ section p {
     display: flex;
 }
 
-/*Left box*/
-
+/* Left box */
 .container {
     align-items: center;
     margin: 0 1rem;
@@ -30,26 +29,25 @@ section p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:1rem;
+    margin-top: 1rem;
 }
-/*Middle Box*/
 
-.middleBox{
+/* Middle Box */
+.middleBox {
     max-width: 10rem;
     height: 40rem;
-    margin-top:1rem;
+    margin-top: 1rem;
 }
 
-/*Right box*/
-
-.rightBox{
+/* Right box */
+.rightBox {
     width: 33.33%;
     height: 40rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    margin-top:1rem;
+    margin-top: 1rem;
 }
 
 .rightBox button {
@@ -76,11 +74,7 @@ section p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0) 70%
-    );
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
     transform: scale(0);
     transition: transform 0.5s ease;
 }
@@ -89,9 +83,7 @@ section p {
     transform: scale(4);
 }
 
-
-/*Grid*/
-
+/* Grid */
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,106 +92,102 @@ section p {
     grid-row-gap: 0px;
     position: relative;
     height: 300px;
-    }
-    
-    .side-dog-right {
-        transform: scaleX(1);
-    }
-    .side-dog-up {
-        transform: rotate(-90deg);
-    }
-    .side-dog-down {
-        transform: rotate(90deg);
-    }
-    .imgHide {
-        display: none;
-    }
-    .imgShow {
-        display: block;
-    }
-
-    .main-dog {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        top: 100px;
-        left: 5.5rem;
-    }
-
-    /*Dogs*/
-
-    .dog1 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-    }
-
-    .dog2 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        left: 5.5rem;
-    }
-
-    .dog3 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        left: 11rem;
-    }
-
-    .dog4 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        top: 100px;
-    }
-
-    .dog5 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        top: 100px;
-        left: 11rem;
-    }
-
-    .dog6 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        top: 12.4rem;
-    }
-
-    .dog7 {
-        position: absolute;
-        width:100px;
-        height: 100px;
-        top: 12.4rem;
-        left: 5.5rem;
-    }
-
-    .dog8 {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        top: 12.4rem;
-        left: 11rem;
-    }
-    
-
-/*Rows*/
-
-.row1, .row2, .row3, .row4, .row5, .row6 {
-    display:flex;
 }
 
-.row1, .row2, .row3, .row4, .row5, .row6 img {
+.side-dog-right {
+    transform: scaleX(1);
+}
+
+.side-dog-up {
+    transform: rotate(-90deg);
+}
+
+.side-dog-down {
+    transform: rotate(90deg);
+}
+
+.imgHide {
+    display: none;
+}
+
+.imgShow {
+    display: block;
+}
+
+.main-dog {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 5.5rem;
+}
+
+/* Dogs */
+.dog1,
+.dog2,
+.dog3,
+.dog4,
+.dog5,
+.dog6,
+.dog7,
+.dog8 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.dog2 {
+    left: 5.5rem;
+}
+
+.dog3 {
+    left: 11rem;
+}
+
+.dog4 {
+    top: 100px;
+}
+
+.dog5 {
+    top: 100px;
+    left: 11rem;
+}
+
+.dog6 {
+    top: 12.4rem;
+}
+
+.dog7 {
+    top: 12.4rem;
+    left: 5.5rem;
+}
+
+.dog8 {
+    top: 12.4rem;
+    left: 11rem;
+}
+
+/* Rows */
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 {
+    display: flex;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 img {
     height: 100px;
     width: 100px;
 }
 
-/*Tutorial*/
-
+/* Tutorial */
 .tutorial-image {
     width: 50rem;
     height: auto;
@@ -211,9 +199,9 @@ section p {
 
 .plus-one {
     position: absolute;
-    top: -20px; 
+    top: -20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
-    color: #f00; 
+    color: #f00;
 }
