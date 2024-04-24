@@ -7,6 +7,343 @@
     <title>Instructions for BonkTheDog Project</title>
 </head>
 <body>
+
+ <h1>Learn how to setup your own interactive game!</h1>
+
+    <h2>We will use 3 languages to create this project:</h2>
+    <ul>
+        <li>HTML for structure</li>
+        <li>CSS for styling</li>
+        <li>JavaScript for functionality</li>
+    </ul>
+    
+    <h2>Step 1: Set up the MAPS and DOCUMENTS</h2>
+    <p>For editing the project you will need to install the following link <a href="https://code.visualstudio.com/">Visual studio code</a>.</p>
+    <img class="tutorial-image"src="./assets/img/visual-studio.png">
+    <h2>Step 1.1: Create a new project folder (you can choose where you create it!)</h2>
+    <p>Open this folder in Visual Studio Code</p>
+    <h2>Step 1.2: Create the same folder strucutre as shown below:</h2>
+    <img class="tutorial-image"src="./assets/img/folder-structure.png">
+    <h2>Step 1.3: Install following extension</h2>
+    <img class="tutorial-image"src="./assets/img/live-server.png">
+    <p>After installing the extension, you can open the project folder in Visual Studio Code and right click on the index.html file and select <strong>"Open with Live Server".</strong></p>
+    <h2>Step 2: Time to code!</h2>
+    <p>When you opened the file in Live Server, you will see a blank page. Now you can start coding!</p>
+    <h2>Step 2.1: Copy the HTML structure shown below and paste it in your <strong>Index.html</strong> file</h2>
+    <pre>
+    <textarea>
+    <section class="container">
+    <div class="leftBox">
+        <h1 class="clickCounter"><p></p></h1>
+        <div class="parent">
+        <div class="side-dog-right dog1 imgHide">
+        <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="side-dog-down dog2 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="side-dog dog3 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="side-dog-right dog4 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="main-dog">
+            <img src="./assets/img/daggoe-mlg.jpg">
+        </div>
+        <div class="side-dog dog5 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="side-dog-right dog6 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="side-dog-up dog7 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        <div class="side-dog dog8 imgHide">
+            <img src="./assets/img/bonk.gif">
+        </div>
+        </div>
+    </div>
+    <div class="middleBox">
+        <div class="row1">
+            <img src="" class="row1-dog1 imgHide image-container" alt="dog">
+            <img src="" class="row1-dog1 imgHide" alt="dog">
+            <img src="" class="row1-dog1 imgHide" alt="dog">
+            <img src="" class="row1-dog1 imgHide" alt="dog">
+            <img src="" class="row1-dog1 imgHide" alt="dog">
+        </div>
+         <div class="row2">
+            <img src="" class="row2-dog1 imgHide" alt="dog">
+            <img src="" class="row2-dog1 imgHide" alt="dog">
+            <img src="" class="row2-dog1 imgHide" alt="dog">
+            <img src="" class="row2-dog1 imgHide" alt="dog">
+            <img src="" class="row2-dog1 imgHide" alt="dog">
+        </div>
+         <div class="row3">
+            <img src="" class="row3-dog1 imgHide" alt="dog">
+            <img src="" class="row3-dog1 imgHide" alt="dog">
+            <img src="" class="row3-dog1 imgHide" alt="dog">
+            <img src="" class="row3-dog1 imgHide" alt="dog">
+            <img src="" class="row3-dog1 imgHide" alt="dog">
+        </div>
+         <div class="row4">
+            <img src="" class="row4-dog1 imgHide" alt="dog">
+            <img src="" class="row4-dog1 imgHide" alt="dog">
+            <img src="" class="row4-dog1 imgHide" alt="dog">
+            <img src="" class="row4-dog1 imgHide" alt="dog">
+            <img src="" class="row4-dog1 imgHide" alt="dog">
+        </div>
+         <div class="row5">
+            <img src="" class="row5-dog1 imgHide" alt="dog">
+            <img src="" class="row5-dog1 imgHide" alt="dog">
+            <img src="" class="row5-dog1 imgHide" alt="dog">
+            <img src="" class="row5-dog1 imgHide" alt="dog">
+            <img src="" class="row5-dog1 imgHide" alt="dog">
+        </div>
+         <div class="row6">
+            <img src="" class="row6-dog1 imgHide" alt="dog">
+            <img src="" class="row6-dog1 imgHide" alt="dog">
+            <img src="" class="row6-dog1 imgHide" alt="dog">
+            <img src="" class="row6-dog1 imgHide" alt="dog">
+            <img src="" class="row6-dog1 imgHide" alt="dog">
+        </div>
+    </div>
+    <div class="rightBox">
+        <button id="dogBat">Slappy dog 25 Credits </button>
+        <button id="middleRowButton1">Cry dog 30 credits </button>
+        <button id="middleRowButton2">Strong dog 40 credits </button>
+        <button id="middleRowButton3">Slappy dog 50 Credits </button>
+        <button id="middleRowButton4">Slappy dog 55 Credits </button>
+        <button id="middleRowButton5">Slappy dog 60 Credits </button>
+        <button id="middleRowButton6">Slappy dog 70 Credits </button>
+</div>
+</section>
+    </textarea>
+    </pre>
+    <h2>Step 2.2: Copy the CSS structure shown below and paste it in your <strong>Main.css</strong> file</h2>
+    <pre>
+    * {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: radial-gradient(circle 897px at 9% 80.3%, rgba(55, 60, 245, 1) 0%, rgba(234, 161, 15, 0.90) 100.2%);
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+section p {
+    justify-content: center;
+    display: flex;
+}
+
+/* Left box */
+.container {
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Middle Box */
+.middleBox {
+    max-width: 10rem;
+    height: 40rem;
+    margin-top: 1rem;
+}
+
+/* Right box */
+.rightBox {
+    width: 33.33%;
+    height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.rightBox button {
+    padding: 15px 30px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    margin: 2rem 0;
+    flex-basis: calc(50% - 0.5rem);
+}
+
+.rightBox button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.rightBox button:hover:after {
+    transform: scale(4);
+}
+
+/* Grid */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    height: 300px;
+}
+
+.side-dog-right {
+    transform: scaleX(1);
+}
+
+.side-dog-up {
+    transform: rotate(-90deg);
+}
+
+.side-dog-down {
+    transform: rotate(90deg);
+}
+
+.imgHide {
+    display: none;
+}
+
+.imgShow {
+    display: block;
+}
+
+.main-dog {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 5.5rem;
+}
+
+/* Dogs */
+.dog1,
+.dog2,
+.dog3,
+.dog4,
+.dog5,
+.dog6,
+.dog7,
+.dog8 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.dog2 {
+    left: 5.5rem;
+}
+
+.dog3 {
+    left: 11rem;
+}
+
+.dog4 {
+    top: 100px;
+}
+
+.dog5 {
+    top: 100px;
+    left: 11rem;
+}
+
+.dog6 {
+    top: 12.4rem;
+}
+
+.dog7 {
+    top: 12.4rem;
+    left: 5.5rem;
+}
+
+.dog8 {
+    top: 12.4rem;
+    left: 11rem;
+}
+
+/* Rows */
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 {
+    display: flex;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5,
+.row6 img {
+    height: 100px;
+    width: 100px;
+}
+
+/* Tutorial */
+.tutorial-image {
+    width: 50rem;
+    height: auto;
+}
+
+.image-container {
+    position: relative;
+}
+
+.plus-one {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #f00;
+}
+
+pre {
+    display: block;
+    font-family: monospace;
+    unicode-bidi: isolate;
+    white-space: pre;
+    margin: 1em 0px;
+    border: 1px black solid ;
+    background-color: gray;
+    width: max-content;
+}
+    </>
+    </pre>
+
 <h1>JavaScript Code Explanation</h1>
 
 <h2>Initialization Variables:</h2>
