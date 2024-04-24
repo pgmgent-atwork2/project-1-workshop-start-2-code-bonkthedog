@@ -204,3 +204,16 @@ section p {
     width: 50rem;
     height: auto;
 }
+
+.image-container {
+    position: relative;
+}
+
+.plus-one {
+    position: absolute;
+    top: -20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #f00; 
+}

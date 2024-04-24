@@ -22,6 +22,7 @@ setInterval(function() {
     document.querySelector(".clickCounter").textContent = counterValue;
 }, 1000);
 
+
 function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
         if (counterValue >= requiredCredits) {
@@ -31,7 +32,7 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
-                counterValue = Math.max(0, counterValue - requiredCredits); // subtract requiredCredits from counterValue, but not less than 0
+                counterValue = Math.max(0, counterValue - requiredCredits); 
             }
         }
     });
@@ -39,6 +40,8 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
 
 function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
+        counterValue++; // increment counterValue each time button is clicked
+        document.querySelector(".clickCounter").textContent = counterValue; 
         if (counterValue >= requiredCredits) {
             const images = document.querySelectorAll(`.middleBox ${imgClass}`);
             const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
@@ -46,11 +49,26 @@ function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
                 hiddenImages[0].classList.remove("imgHide");
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
-                counterValue = Math.max(0, counterValue - requiredCredits); // subtract requiredCredits from counterValue, but not less than 0
+                counterValue = Math.max(0, counterValue - requiredCredits); 
             }
         }
     });
 }
+
+setInterval(function() {
+    const imageContainers = document.querySelectorAll('.image-container');
+    imageContainers.forEach(container => {
+        const plusOne = document.createElement('div');
+        plusOne.textContent = '+1';
+        plusOne.classList.add('plus-one');
+        container.appendChild(plusOne);
+
+        setTimeout(function() {
+            container.removeChild(plusOne);
+        }, 1000); // remove after 1 second
+    });
+}, 1000);
+
 
 addEventListenerToButton("dogBat", 25, ".imgHide");
 addEventListenerToButton2("middleRowButton1", 30, ".row1-dog1");
