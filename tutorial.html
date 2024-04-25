@@ -40,7 +40,6 @@
 <p>Try changing the buttons color</p>
 <p>Go to <pre>.rightBox button</pre> in the CSS file and change the border-radius to <pre>10px</pre></p>
 <p>Now the buttons border should be changed!</p>
-
 <h1>JavaScript Code Explanation</h1>
 
 <h2>Initialization Variables:</h2>
@@ -48,10 +47,7 @@
     Two variables, <code>imageIndex</code> and <code>counterValue</code>, are initialized to keep track of the index of displayed images and the current counter value.
 </p>
 
-<pre>
-let imageIndex = 0;
-let counterValue = 200;
-</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/2/embed/js/dark/"></script>
 
 
 <h2>Window Load Event:</h2>
@@ -59,25 +55,14 @@ let counterValue = 200;
     When the window has fully loaded, this event handler selects all image elements within each row and sets their source to <code>/assets/img/daggoe.jpg</code>.
 </p>
 
-<pre>window.onload = function() {
-    const rows = ['row1', 'row2', 'row3', 'row4', 'row5', 'row6'];
-    rows.forEach((row, index) => {
-        const images = document.querySelectorAll(`.${row} img`);
-        images.forEach((img, imgIndex) => {
-            img.src = `/assets/img/daggoe.jpg`; // replace with your image source
-        });
-    });
-};</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/4/embed/js/dark/"></script>
 
 <h2>Main Dog Click Event:</h2>
 <p>
     This event listener increments the <code>counterValue</code> by one and updates the text content of an element with the class <code>clickCounter</code> to display the new value when the main dog image is clicked.
 </p>
 
-<pre>document.querySelector(".main-dog img").addEventListener("click", function() {
-    counterValue++;
-    document.querySelector(".clickCounter").textContent = counterValue;
-});</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/5/embed/js/dark/"></script>
 
 <h2>Counter Update Interval:</h2>
 <p>
@@ -85,10 +70,7 @@ let counterValue = 200;
 </p>
 
 
-<pre>setInterval(function() {
-    counterValue += imageIndex ;
-    document.querySelector(".clickCounter").textContent = counterValue;
-}, 1000);</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/11/embed/js/dark/"></script>
 
 
 
@@ -96,67 +78,19 @@ let counterValue = 200;
 <p>
     These functions add event listeners to various buttons. They check if the <code>counterValue</code> is sufficient to purchase the corresponding item. If so, they reveal the hidden image and update the <code>counterValue</code> accordingly.
 </p>
-<pre>function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
-    document.getElementById(buttonId).addEventListener("click", function() {
-        if (counterValue >= requiredCredits) {
-            const images = document.querySelectorAll(`.leftBox ${imgClass}`);
-            const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
-            if (hiddenImages.length > 0) {
-                hiddenImages[0].classList.remove("imgHide");
-                hiddenImages[0].classList.add("imgShow");
-                imageIndex++;
-                counterValue = Math.max(0, counterValue - requiredCredits); 
-            }
-        }
-    });
-}</pre>
-<pre>function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
-    document.getElementById(buttonId).addEventListener("click", function() {
-        counterValue++; // increment counterValue each time button is clicked
-        document.querySelector(".clickCounter").textContent = counterValue; 
-        if (counterValue >= requiredCredits) {
-            const images = document.querySelectorAll(`.middleBox ${imgClass}`);
-            const hiddenImages = Array.from(images).filter(img => img.classList.contains('imgHide'));
-            if (hiddenImages.length > 0) {
-                hiddenImages[0].classList.remove("imgHide");
-                hiddenImages[0].classList.add("imgShow");
-                imageIndex++;
-                counterValue = Math.max(0, counterValue - requiredCredits); 
-            }
-        }
-    });
-}</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/15/embed/js/dark/"></script>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/13/embed/js/dark/"></script>
 <h2>Plus One Animation Interval:</h2>
 <p>
     This interval function creates a "+1" animation every second in image containers, then removes it after one second.
 </p>
-<pre>setInterval(function() {
-    const imageContainers = document.querySelectorAll('.image-container');
-    imageContainers.forEach(container => {
-        const plusOne = document.createElement('div');
-        plusOne.textContent = '+1';
-        plusOne.classList.add('plus-one');
-        container.appendChild(plusOne);
-
-        setTimeout(function() {
-            container.removeChild(plusOne);
-        }, 1000); // remove after 1 second
-    });
-}, 1000);</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/8/embed/js/dark/"></script>
 
 <h2>Button Event Listeners:</h2>
 <p>
     These functions add event listeners to various buttons. They check if the <code>counterValue</code> is sufficient to purchase the corresponding item. If so, they reveal the hidden image and update the <code>counterValue</code> accordingly.
 </p>
-<pre>
-addEventListenerToButton("dogBat", 25, ".imgHide");
-addEventListenerToButton2("middleRowButton1", 30, ".row1-dog1");
-addEventListenerToButton2("middleRowButton2", 40, ".row2-dog1");
-addEventListenerToButton2("middleRowButton3", 50, ".row3-dog1");
-addEventListenerToButton2("middleRowButton4", 60, ".row4-dog1");
-addEventListenerToButton2("middleRowButton5", 70, ".row5-dog1");
-addEventListenerToButton2("middleRowButton6", 80, ".row6-dog1");
-</pre>
+<script async src="//jsfiddle.net/EliazBelloMedrano/gsyfwh31/10/embed/js/dark/"></script>
 </body>
 </html>
 message.txt
