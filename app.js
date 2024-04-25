@@ -23,6 +23,7 @@ setInterval(function() {
 }, 1000);
 
 
+
 function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
         if (counterValue >= requiredCredits) {
