@@ -232,7 +232,7 @@ pre {
         indigo, 
         violet
     );
-    animation: rainbow 0.5s linear infinite;
+    animation: rainbow 2s linear infinite;
 }
 
 @keyframes rainbow {
