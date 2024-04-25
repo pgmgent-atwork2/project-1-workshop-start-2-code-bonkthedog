@@ -1,15 +1,21 @@
 let imageIndex = 0;
-let counterValue = 200;
+let counterValue = 1000;
 
 
 window.onload = function() {
+    const baseNames = ['daggoe-gamer', 'daggoe-hamburger', 'daggoe-hug', 'daggoe-mac', 'daggoe-mc', 'daggoe-mlg', 'daggoe-strong']; // Array of different names
+    const repetitions = 6;
     const rows = ['row1', 'row2', 'row3', 'row4', 'row5', 'row6'];
-    rows.forEach((row, index) => {
-        const images = document.querySelectorAll(`.${row} img`);
-        images.forEach((img, imgIndex) => {
-            img.src = `/assets/img/daggoe.jpg`; // replace with your image source
+
+    for (let i = 0; i < repetitions; i++) {
+        rows.forEach((row, index) => {
+            const images = document.querySelectorAll(`.${row} img`);
+            images.forEach((img, imgIndex) => {
+                const randomName = baseNames[Math.floor(Math.random() * baseNames.length)]; 
+                img.src = `./assets/img/${randomName}.jpg`; 
+            });
         });
-    });
+    }
 };
 
 document.querySelector(".main-dog img").addEventListener("click", function() {

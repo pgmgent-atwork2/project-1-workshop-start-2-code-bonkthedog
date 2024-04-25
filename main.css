@@ -216,3 +216,49 @@ pre {
     background-color: gray;
     width: max-content;
 }
+
+.rainbow {
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    background-image: linear-gradient(
+        45deg, 
+        red, 
+        orange, 
+        yellow, 
+        green, 
+        blue, 
+        indigo, 
+        violet
+    );
+    animation: rainbow 0.5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {background-position: 100% 0;}
+    100% {background-position: 0 100%;}
+}
+
+.rainbow2 {
+    background-size: 200% auto;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    background-image: linear-gradient(
+        45deg, 
+        red, 
+        orange, 
+        yellow, 
+        green, 
+        blue, 
+        indigo, 
+        violet
+    );
+    animation: rainbow 10s alternate-reverse infinite;
+}
+
+@keyframes rainbow {
+    0% {background-position: 100% 0;}
+    100% {background-position: 0 100%;}
+}
