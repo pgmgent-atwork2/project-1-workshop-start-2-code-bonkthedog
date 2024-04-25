@@ -1,5 +1,7 @@
 let imageIndex = 0;
 let counterValue = 0;
+const clickSound = new Audio('./assets/sounds/click.wav');
+const moneySound = new Audio('./assets/sounds/money.mp3');
 
 
 window.onload = function() {
@@ -20,14 +22,19 @@ window.onload = function() {
 
 document.querySelector(".main-dog img").addEventListener("click", function() {
     counterValue++;
+    clickSound.play();
     document.querySelector(".clickCounter").textContent = counterValue;
 });
 
 setInterval(function() {
     counterValue += imageIndex ;
+    
     document.querySelector(".clickCounter").textContent = counterValue;
 }, 1000);
 
+document.addEventListener("click", function() {
+    clickSound.play();
+});
 
 
 function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
@@ -57,6 +64,7 @@ function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
                 hiddenImages[0].classList.add("imgShow");
                 imageIndex++;
                 counterValue = Math.max(0, counterValue - requiredCredits); 
+                moneySound.play(); 
             }
         }
     });
