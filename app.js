@@ -76,7 +76,6 @@ setInterval(function() {
     });
 }, 1000);
 
-
 addEventListenerToButton("dogBat", 25, ".imgHide");
 addEventListenerToButton2("middleRowButton1", 30, ".row1-dog1");
 addEventListenerToButton2("middleRowButton2", 40, ".row2-dog1");
@@ -84,8 +83,3 @@ addEventListenerToButton2("middleRowButton3", 50, ".row3-dog1");
 addEventListenerToButton2("middleRowButton4", 60, ".row4-dog1");
 addEventListenerToButton2("middleRowButton5", 70, ".row5-dog1");
 addEventListenerToButton2("middleRowButton6", 80, ".row6-dog1");
-
-
-
-
-
