@@ -1,5 +1,5 @@
 let imageIndex = 0;
-let counterValue = 1000;
+let counterValue = 0;
 
 
 window.onload = function() {
