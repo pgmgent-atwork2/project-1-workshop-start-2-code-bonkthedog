@@ -3,7 +3,7 @@ let counterValue = 0;
 
 
 window.onload = function() {
-    const baseNames = ['daggoe-gamer', 'daggoe-hamburger', 'daggoe-hug', 'daggoe-mac', 'daggoe-mc', 'daggoe-mlg', 'daggoe-strong']; // Array of different names
+    const baseNames = ['daggoe-gamer', 'daggoe-hamburger', 'daggoe-hug', 'daggoe-mac', 'daggoe-mc', 'daggoe-mlg', 'daggoe-strong'];
     const repetitions = 6;
     const rows = ['row1', 'row2', 'row3', 'row4', 'row5', 'row6'];
 
@@ -47,7 +47,7 @@ function addEventListenerToButton(buttonId, requiredCredits, imgClass) {
 
 function addEventListenerToButton2(buttonId, requiredCredits, imgClass) {
     document.getElementById(buttonId).addEventListener("click", function() {
-        counterValue++; // increment counterValue each time button is clicked
+        counterValue++;
         document.querySelector(".clickCounter").textContent = counterValue; 
         if (counterValue >= requiredCredits) {
             const images = document.querySelectorAll(`.middleBox ${imgClass}`);
