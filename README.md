@@ -13,6 +13,6 @@ When buying additional upgrades, you will earn more points per second to buy mor
 - [URl to Repository](https://github.com/pgmgent-atwork2/project-1-workshop-start-2-code-bonkthedog)
 
 ## Authors
-Gust Pêtre & Eliaz 
+Gust Pêtre & Eliaz Bello Medrano 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Y748gS5A)
